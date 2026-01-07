@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RotateAround : MonoBehaviour
+public class Rotator : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private Transform _center;
@@ -12,7 +12,7 @@ public class RotateAround : MonoBehaviour
         _localCenter = transform.position - _center.position;
     }
 
-    void Update()
+    private void Update()
     {
         transform.position = _localCenter + _center.position;
 
